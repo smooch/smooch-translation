@@ -1,0 +1,7 @@
+{
+  "name": "Smooch translation processor",
+  "description": "Translate incoming user messages into the language of your choice",
+  "repository": "https://github.com/smooch/smooch-translation.git",
+  "logo": "https://website.smooch.io/sm_logo_fb.jpg",
+  "keywords": ["smooch", "translate", "node"]
+}
