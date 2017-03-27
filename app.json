@@ -3,5 +3,27 @@
   "description": "Translate incoming user messages into the language of your choice",
   "repository": "https://github.com/smooch/smooch-translation.git",
   "logo": "https://website.smooch.io/sm_logo_fb.jpg",
-  "keywords": ["smooch", "translate", "node"]
+  "keywords": ["smooch", "translate", "node"],
+  "env": {
+    "LANGUAGE_CODE": {
+      "description": "An ISO 639-1 language code for the target language",
+      "value": ""
+    },
+    "YANDEX_API_KEY": {
+      "description": "API key for Yandex translation API",
+      "value": ""
+    },
+    "SMOOCH_KEY_ID": {
+      "description": "Smooch app level secret key ID",
+      "value": ""
+    },
+    "SMOOCH_SECRET": {
+      "description": "Smooch app level secret key",
+      "value": ""
+    },
+    "SERVICE_URL": {
+      "description": "The full base URL of this application",
+      "value": ""
+    }
+  }
 }
