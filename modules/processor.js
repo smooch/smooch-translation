@@ -13,8 +13,7 @@ module.exports = async (req, res) => {
       text
     });
 
-    const data = await smooch({ nonce }).post('/middleware/continue', { metadata });
-    console.log(data);
+    await smooch({ nonce }).post('/middleware/continue', { metadata });
     res.end();
   } catch(err) {
     console.log('ERROR IN HANDLER', err);
