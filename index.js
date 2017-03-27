@@ -6,6 +6,7 @@ const processor = require('./modules/processor');
 
 pipeline.setup()
   .then(data => {
+    console.log(data);
     if (data && data.error) {
       throw new Error(data.error.description);
     }
