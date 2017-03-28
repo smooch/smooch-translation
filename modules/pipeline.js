@@ -19,10 +19,10 @@ exports.setup = async () => {
     }
   }
 
-  const processor = await endpoint.post('/middleware/processors', {
+  const processorData = await endpoint.post('/middleware/processors', {
     target: config.serviceUrl + '/processor'
   });
 
   return endpoint.put('/middleware/pipelines/appuser-message', active
-    .concat([ processor._id ]));
+    .concat([ processorData.processor._id ]));
 };
