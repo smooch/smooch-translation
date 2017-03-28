@@ -4,20 +4,19 @@ const bodyParser = require('body-parser');
 const pipeline = require('./modules/pipeline');
 const processor = require('./modules/processor');
 
-pipeline.setup()
-  .then(data => {
-    if (data && data.error) {
-      throw new Error(data.error.description);
-    }
-    try {
-      express()
-        .get('/', (req, res) => res.send('Welcome to Smooch-Translation.'))
-        .post('/processor', bodyParser.json(), processor)
-        .listen(config.port, () => {
-          console.log('Listening on', config.port);
-        });
-    } catch (err) {
-      throw err;
-    }
-  })
-  .catch(err => console.log('Failed to complete setup', err));
+express()
+  .get('/', (req, res) => res.send('Welcome to Smooch-Translation.'))
+  .post('/processor', bodyParser.json(), processor)
+  .listen(config.port, () => {
+    console.log('Listening on', config.port);
+    pipeline.setup()
+      .then(data => {
+        if (data && data.error) {
+          throw new Error(data.error.description);
+        }
+      })
+      .catch(err => {
+        console.log('Failed to complete setup', err);
+        throw err;
+      });
+  });

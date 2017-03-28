@@ -24,5 +24,5 @@ exports.setup = async () => {
   });
 
   return endpoint.put('/middleware/pipelines/appuser-message', active
-    .concat([ processor.target ]));
+    .concat([ processor._id ]));
 };
