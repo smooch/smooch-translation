@@ -1,3 +1,5 @@
+_Intended use: This code is a proof of concept and is not meant to be used in production. It should be used as a reference only to create your own implementation._
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This Smooch message processor uses the Yandex translation API to auto detect language and translate appUser messages into a target language. The translation is added as metadata to the message.
@@ -30,5 +32,3 @@ Here's a screenshot of a message with the translation metadata displayed below t
 <img width="497" alt="screen shot 2017-03-27 at 3 29 17 pm" src="https://cloud.githubusercontent.com/assets/2235885/24374451/ed840a58-1302-11e7-88e7-4861f7707563.png">
 
 This screenshot was created using an open source reference implementation of Smooch, [Smooch-Desk](https://github.com/smooch/smooch-desk).
-
-This code is a proof of concept only. **This is not production quality software**. It can be used as a reference to create your own implementation.
