@@ -1,4 +1,4 @@
-_Intended use: This code is a proof of concept and is not meant to be used in production. It should be used as a reference only to create your own implementation._
+_**Intended use:** This code is a proof of concept and is not meant to be used in production. It should be used as a reference only to create your own implementation._
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
