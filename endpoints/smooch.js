@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const fetch = require('node-fetch');
-const service = 'https://api.smooch.io/v1';
+const config = require('../config');
 
 const getToken = creds => jwt.sign({ scope: 'app' }, creds.secret, {
     header: {
@@ -11,7 +11,7 @@ const getToken = creds => jwt.sign({ scope: 'app' }, creds.secret, {
 });
 
 const requestFunctionGenerator = (token, method) => (path, data) => {
-  return fetch(service + path, {
+  return fetch(config.service + path, {
     method,
     headers: {
       'Accept': 'application/json',
